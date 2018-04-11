@@ -1,15 +1,3 @@
-/*************************************************************
-* FILENAME   : min_2d.c
-* AUTHOR     : Zhidkov Evgueny, 3057/2
-* PURPOSE    : 2D gradient methods
-* LAST UPDATE: 14.03.2004
-* NOTE       : none
-*************************************************************/
-
-//////////////////////////////////////////////////////////////
-// LOCAL INCLUDES
-//////////////////////////////////////////////////////////////
-
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
@@ -17,10 +5,6 @@
 #include <conio.h>
 #include "MatrixWork.h"
 #include <iostream>
-
-//////////////////////////////////////////////////////////////
-// LOCAL DEFINES
-//////////////////////////////////////////////////////////////
 
 #define EPSILON 0.001
 
@@ -416,6 +400,13 @@ void FindEigenVals(double left, double right, double bottom, double top)
 //////////////////////////////////////////////////////////////
 int main(void)
 {
+	/*
+	* NOTE: IF YOU WANT TO USE THIS CODE, CHANGE THOSE THINGS:
+	* FOR SQARE FORM MINIMIZATION AND NEWTON
+	* 1) Function() <- this is for standart square form (x^2 + y^2 + z^2 + xy + xz + yz), change your coefficents manually
+	* 2) Gradient() <- change this for your gradient of square form
+	* 3) Hessian() <- change for your Hessian matrix
+	*/
 	int i;
 //	FindEigenVals(-2, 2, -2, 2);
 	//FindLipshitzConstant(-2, 2, -2, 2);
